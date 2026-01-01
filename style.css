@@ -1,0 +1,57 @@
+/* Background with image + soft overlay */
+body {
+    min-height: 100vh;
+    background: url("images/birthday.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    margin: 0;
+}
+
+/* Overlay for readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.4); /* soft transparent layer */
+    z-index: 0;
+}
+
+/* Card styling */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1; /* ensures card is above overlay */
+}
+
+/* Romantic heading font */
+h1 {
+    font-family: 'Great Vibes', cursive;
+    color: #e63946;
+    margin-bottom: 15px;
+    font-size: 42px;
+}
+
+/* Paragraph styling */
+p {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Video styling */
+video {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
